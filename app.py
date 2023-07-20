@@ -6,7 +6,9 @@ from PIL import Image
 from streamlit_option_menu import option_menu
 
 st.set_page_config(page_title="Alzheimer Stage Prediction", layout='wide')
+
 st.markdown("<h1 style='text-align: center; color: gray;'>Stage of Alzheimer </h1>", unsafe_allow_html=True)
+
 page_style = '''
                 <style>
                 #MainMenu {visibility: hidden;}
@@ -20,7 +22,8 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-model = tf.keras.models.load_model("/Users/vivekgoel/Documents/Coding Mac /Alzheimer's Disease Detection/model2.h5")
+model = tf.keras.models.load_model("Trained_Model2.h5")
+
 selected_tab = option_menu(
     menu_title = None,
     options = ['About Alzheimers', 'Statistics',"How to Use", 'Alzheimers\'s Detection',"Get in Touch with Me"],
@@ -33,6 +36,8 @@ selected_tab = option_menu(
         "nav-link": {"font-size": "18px"}
     }
 )
+
+
 
 if selected_tab == 'Alzheimers\'s Detection':
 
@@ -58,6 +63,8 @@ if selected_tab == 'Alzheimers\'s Detection':
             with open("classes.pkl","rb") as f:
                 d = pickle.load(f)
             st.info("The model predicts the image as "+d[pred])
+
+
 
 elif selected_tab == 'About Alzheimers':
     st.markdown("<h6 style='text-align: center; color: gray;'>Alzheimer's disease (AD) is a neurodegenerative disease that usually starts slowly and progressively worsens, and is the cause of 60–70% of cases of dementia.\
@@ -96,6 +103,7 @@ elif selected_tab == 'About Alzheimers':
     
     st.markdown("<h6 style='text-align: center; color: white;'>This information was made available using Google Search and Wikipedia</h6>", unsafe_allow_html=True)
 
+
 elif selected_tab == 'Statistics':
     c1, c2 = st.columns(2)
     with c1:
@@ -129,8 +137,9 @@ elif selected_tab == 'Statistics':
     with c2:
         st.write("https://www.alz.org/media/documents/alzheimers-facts-and-figures.pdf")
 
+
 elif selected_tab == 'How to Use':
-    st.write("My Model is trained on more then 2.6 Million Parameters. It has a weighted average F1 Score of 0.95.")
+    st.write("My Model is trained on more then 2.6 Million Parameters. It has a weighted average F1 Score of 0.97.")
     st.write("My model divides the stages of Alzeimer in 4 different stages (according to their severity):")
     st.write("1. Non Demented")
     st.write("2. Very Mild Demented")
@@ -141,6 +150,8 @@ elif selected_tab == 'How to Use':
     st.write("1. You first need a soft copy of MRI of your brain.  {In case you don't have any image }")
     st.write("2. Upload the image on the Next tab known as Alzheimer's Detection")
     st.write("3. The model will out the prediction below the button in a Blue coloured dialog Box")
+
+
 
 elif selected_tab == 'Get in Touch with Me':
     st.write("##")
