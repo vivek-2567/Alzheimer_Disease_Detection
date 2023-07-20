@@ -147,7 +147,7 @@ elif selected_tab == 'How to Use':
     st.write("4. Moderate Demented")
     st.write("##")
     st.write("To use this Machine Learning model:")
-    st.write("1. You first need a soft copy of MRI of your brain.  {In case you don't have any image }")
+    st.write("1. You first need a soft copy of MRI of your brain.  {In case you don't have any image https://shorturl.at/ixyHO }")
     st.write("2. Upload the image on the Next tab known as Alzheimer's Detection")
     st.write("3. The model will out the prediction below the button in a Blue coloured dialog Box")
 
@@ -161,7 +161,7 @@ elif selected_tab == 'Get in Touch with Me':
         <form action="https://formsubmit.co/tokas.2sonu@gmail.com" method="POST">
             <input type="hidden" name="_autoresponse" value="Thank You for spending your valuable time on my website. I will contact you soon.">
             <input type="hidden" name="_template" value="table">
-            <input type="hidden" name="_next" value="https://vivek-2567-book-recommendation-system-app-y9vhhy.streamlit.app">
+            <input type="hidden" name="_next" value="https://alzheimerdiseasedetection.streamlit.app/">
             <input type="text" name="name" id = 'input' placeholder = "Your Name" required>
             <input type="email" name="email" id = 'input' placeholder = "Your Email" required>
             <textarea name = 'message' id = 'input' placeholder = 'Your Message' required></textarea>
