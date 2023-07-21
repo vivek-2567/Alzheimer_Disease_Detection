@@ -68,3 +68,9 @@ Technologies used in the project:
 *   Pickle
 *   Tensorflow
 *   Scikit-Learn
+
+## Links
+-[Dataset from Kaggle](https://www.kaggle.com/datasets/uraninjo/augmented-alzheimer-mri-dataset)
+
+## Feedback
+If you have any feedback please reachout to me @ vivekgoel0207@gmail.com
